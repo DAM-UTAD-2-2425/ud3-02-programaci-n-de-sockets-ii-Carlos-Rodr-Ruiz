@@ -2,24 +2,23 @@ package cliente;
 
 import java.util.Scanner;
 
-
 /**
- * No debes tocar este código
+ * No debes tocar este cï¿½digo
  */
 public class PrimitivaCliente {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner (System.in);
-		ClienteTCP canal = new ClienteTCP("localhost",5555);
-		int [] combi = new int [6];
-		System.out.println("Bienvenido a la Lotería Primitiva");
+		Scanner sc = new Scanner(System.in);
+		ClienteTCP canal = new ClienteTCP("localhost", 5555);
+		int[] combi = new int[6];
+		System.out.println("Bienvenido a la Loterï¿½a Primitiva");
 		do {
-			System.out.println("Escriba su combinación de 6 números (uno por línea):");
+			System.out.println("Escriba su combinaciï¿½n de 6 nï¿½meros (uno por lï¿½nea):");
 			int num;
 			for (int i = 0; i < combi.length; i++) {
 				combi[i] = sc.nextInt();
 			}
 			System.out.println(canal.comprobarBoleto(combi));
-			System.out.print("¿Desea volver a jugar? (s/n)");
+			System.out.print("ï¿½Desea volver a jugar? (s/n)");
 		} while (sc.next().toLowerCase().equals("s"));
 		canal.finSesion();
 	}
